@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:15.3-alpine
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=even_blog
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    ports:
+      - "5433:5432"
+  web:
+    build: .
+    command: "./bin/rails server"
+    environment:
+      - RAILS_ENV=development
+      - POSTGRES_HOST=db
+      - POSTGRES_DB=even_blog
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - storage:/rails/storage
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+volumes:
+  postgres_data:
+  storage:

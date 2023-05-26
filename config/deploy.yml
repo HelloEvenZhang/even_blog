@@ -1,0 +1,33 @@
+service: even_blog
+image: evenzhang0802/even_blog
+servers:
+  web:
+    - 134.175.233.100
+registry:
+  username: evenzhang0802
+  password:
+    - MRSK_REGISTRY_PASSWORD
+env:
+  clear:
+    RAILS_ENV: production
+    POSTGRES_HOST: 134.175.233.100
+    POSTGRES_DB: even_blog
+  secret:
+    - RAILS_MASTER_KEY
+    - POSTGRES_USER
+    - POSTGRES_PASSWORD
+ssh:
+  user: ubuntu
+accessories:
+  db:
+     image: postgres:15.3-alpine
+     host: 134.175.233.100
+     port: 5432
+     env:
+       clear:
+         POSTGRES_DB: even_blog
+       secret:
+         - POSTGRES_USER
+         - POSTGRES_PASSWORD
+     directories:
+       - data:/var/lib/postgresql/data
