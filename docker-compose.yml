@@ -13,7 +13,8 @@ services:
     build: .
     command: "./bin/rails server"
     environment:
-      - RAILS_ENV=development
+      - RAILS_ENV=production
+      - SECRET_KEY_BASE=${SECRET_KEY_BASE}
       - POSTGRES_HOST=db
       - POSTGRES_DB=even_blog
       - POSTGRES_USER=${POSTGRES_USER}

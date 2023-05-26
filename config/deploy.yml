@@ -13,7 +13,6 @@ env:
     POSTGRES_HOST: 134.175.233.100
     POSTGRES_DB: even_blog
   secret:
-    - RAILS_MASTER_KEY
     - SECRET_KEY_BASE
     - POSTGRES_USER
     - POSTGRES_PASSWORD
