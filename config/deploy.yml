@@ -2,7 +2,12 @@ service: even_blog
 image: evenzhang0802/even_blog
 servers:
   web:
-    - 134.175.233.100
+    hosts:
+      - 134.175.233.100
+    options:
+      # add the host ip, so the containers can reach each other without docker-compose by using
+      # postgres://host.docker.internal/.. etc.
+      add-host: host.docker.internal:host-gateway
 registry:
   username: evenzhang0802
   password:
@@ -10,7 +15,7 @@ registry:
 env:
   clear:
     RAILS_ENV: production
-    POSTGRES_HOST: 134.175.233.100
+    POSTGRES_HOST: host.docker.internal
     POSTGRES_DB: even_blog
   secret:
     - SECRET_KEY_BASE
