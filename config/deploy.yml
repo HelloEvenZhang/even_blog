@@ -14,6 +14,7 @@ env:
     POSTGRES_DB: even_blog
   secret:
     - RAILS_MASTER_KEY
+    - SECRET_KEY_BASE
     - POSTGRES_USER
     - POSTGRES_PASSWORD
 ssh:
