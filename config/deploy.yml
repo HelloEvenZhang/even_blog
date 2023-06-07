@@ -26,7 +26,7 @@ ssh:
 traefik:
   options:
     publish:
-      - "443:443"
+      - 443:443
   args:
     entrypoints.web.address: ':80'
     entryPoints.websecure.address: ":443"
