@@ -1,1 +1,1 @@
-server ENV["SERVER_PUBLIC_IP"], user: 'deploy', roles: %w{app db web}
+server "134.175.233.100", user: 'deploy', roles: %w{app db web}
