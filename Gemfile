@@ -49,5 +49,12 @@ group :development do
   gem "web-console"
 
   gem "error_highlight", ">= 0.4.0"
+
+  # Deploy to Server
+  gem "capistrano"
+  gem "capistrano-bundler"
+  gem "capistrano-rails"
+  gem "capistrano-rbenv"
+  gem "capistrano3-puma", github: "seuros/capistrano-puma"
 end
 
