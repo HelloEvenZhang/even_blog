@@ -2,7 +2,7 @@
 lock "~> 3.17.3"
 
 set :application, "even_blog"
-set :repo_url, "git@github.com:HelloEvenZhang/even_blog.git"
+set :repo_url, "https://github.com/HelloEvenZhang/even_blog.git"
 set :branch, "release"
 
 append :linked_files, "config/database.yml", "config/master.key"
