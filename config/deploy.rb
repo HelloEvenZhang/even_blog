@@ -14,6 +14,7 @@ set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
 set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
 set :puma_access_log, "#{release_path}/log/puma.error.log"
 set :puma_error_log,  "#{release_path}/log/puma.access.log"
+set :puma_conf, "#{shared_path}/puma.rb"
 
 set :puma_preload_app, true
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
