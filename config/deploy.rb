@@ -6,7 +6,7 @@ set :repo_url, "https://github.com/HelloEvenZhang/even_blog.git"
 set :branch, "release"
 
 append :linked_files, "config/database.yml", "config/master.key"
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor", "storage"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", ".bundle", "public/system", "public/uploads"
 
 # puma相关配置
 set :puma_bind,       "unix:#{shared_path}/tmp/sockets/puma.sock"
