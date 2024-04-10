@@ -3,8 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.0"
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", github: "rails/rails", branch: "main"
+# Rails
+gem "rails", "~> 7.1.3.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -56,5 +56,7 @@ group :development do
   gem "capistrano-rails"
   gem "capistrano-rbenv"
   gem "capistrano3-puma", github: "seuros/capistrano-puma"
+
+  gem "byebug"
 end
 
