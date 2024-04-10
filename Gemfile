@@ -55,7 +55,7 @@ group :development do
   gem "capistrano-bundler"
   gem "capistrano-rails"
   gem "capistrano-rbenv"
-  gem "capistrano3-puma", github: "seuros/capistrano-puma"
+  gem "capistrano3-puma"
 
   gem "byebug"
 end
