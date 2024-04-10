@@ -1,0 +1,128 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require reset
+ *= require_self
+ *= require actiontext
+ *= require_tree ./common
+ *= require_tree ./home
+ *= require_tree ./posts
+ */
+
+@font-face {
+  font-family: 'Palanquin';
+  src: url('<%= asset_path('fonts/Palanquin.ttf') %>') format('truetype'),
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JosefinSans';
+  src: url('<%= asset_path('fonts/JosefinSans.ttf') %>') format('truetype'),
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('<%= asset_path('fonts/Quicksand.otf') %>') format('opentype'),
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body header {
+  background: #fff;
+  width: 100%;
+  height: 75px;
+}
+
+body header .container{
+  width: 1170px;
+  height: 75px;
+  margin: 0 auto;
+}
+
+body header .container .logo{
+  float: left;
+  width: 360px;
+  height: 75px;
+}
+
+body header .container .logo h2{
+  margin: 0;
+}
+
+body header .container .logo h2 a{
+  color: #666;
+  font-size: 35px;
+  font-family: 'Quicksand', sans-serif;
+  line-height: 75px;
+}
+
+body header .container .menu{
+  float: right;
+  width: 750px;
+  height: 75px;
+}
+
+body header .container .menu ul {
+  float: right;
+  width: 300px;
+  height: 75px;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Palanquin', sans-serif;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+body header .container .menu ul li{
+  float: left;
+  width: 100px;
+  height: 75px;
+  line-height: 75px;
+}
+
+body header .container .menu ul li a{
+  color: #666666;
+}
+
+body header .container .menu ul li a.active{
+  color: #D8C9C9;
+}
+body footer {
+  padding: 60px 0;
+  background: #f7f7f7;
+  position: relative;
+  font-size: 14px;
+  line-height: 23px;
+}
+body footer .main-footer{
+  text-align: center;
+  box-sizing: border-box;
+  font-family: 'JosefinSans', sans-serif;
+  color: #666;
+}
+
+body footer .main-footer p{
+  margin: 0;
+}
+
+body footer .main-footer a{
+  font-family: 'JosefinSans', sans-serif;
+  color: #666;
+}

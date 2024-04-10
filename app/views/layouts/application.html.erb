@@ -1,17 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EvenBlog</title>
+    <title>HelloEven</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h2><a href="/">HelloEven</a></h2>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="/" class="active">HOME</a></li>
+            <li><a href="/">POSTS</a></li>
+            <li><a href="/">ABOUT</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer>
+      <div class="main-footer">
+        <p>Copyright © 2024 By Even Zhang</p>
+        <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2023062564号</a>
+      </div>
+    </footer>
   </body>
 </html>

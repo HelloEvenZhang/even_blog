@@ -1,0 +1,49 @@
+body .home .banner{
+  background: rgba(0, 0, 0, 0.29);
+  width: 100%;
+  height: 550px;
+}
+
+body .home .banner .banner-picture {
+  background-image: url('<%= asset_path('banner.jpeg') %>');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 550px;
+  position: relative;
+}
+
+body .home .banner .banner-picture .overdelay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.29);
+}
+
+body .home .banner .banner-picture .content {
+  position: absolute;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+body .home .banner .banner-picture .content h3 {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 2px;
+}
+
+body .home .lastest-posts {
+  width: 100%;
+  margin: 50px 0;
+  text-align: center;
+}
+
+body .home .lastest-posts h3 {
+  font-size: 30px;
+}

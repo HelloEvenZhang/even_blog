@@ -1,0 +1,16 @@
+<div class="home">
+  <div class="banner">
+    <div class="banner-picture">
+      <div class="overdelay"></div>
+      <div class="content">
+        <h3>Welcome to HelloEven</h3>
+      </div>
+    </div>
+  </div>
+  <div class="lastest-posts">
+    <h3>Latest Posts</h3>
+    <% @lastest_posts.each do |post| %>
+      <%= render post, post: post %>
+    <% end %>
+  </div>
+</div>
