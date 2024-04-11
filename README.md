@@ -1,6 +1,6 @@
 # Project Name
 
-A personal blog owned by EvenZhang, built using Ruby on Rails 7.1, Bootstrap, and PostgreSQL.
+A personal blog owned by EvenZhang, built using Ruby on Rails 7.1, and PostgreSQL.
 
 ## Getting Started
 To get started with this project, clone the repository and install the necessary dependencies:
