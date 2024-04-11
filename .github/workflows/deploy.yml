@@ -15,4 +15,8 @@ jobs:
         with:
           ruby-version: 3.2.0
           bundler-cache: true
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v2
+        with:
+          ssh-private-key: ${{ secrets.DEPLOY_KEY }}    
       - run: bundle exec cap production deploy
