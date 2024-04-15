@@ -1,0 +1,25 @@
+<div class="post-card" id="<%= dom_id post %>">
+  <div class="card-background">
+    <%= image_tag "post-card-default.jpg" %>
+  </div>
+  <div class="card-info">
+    <div class="title">
+      <h3><%= post.title %></h3>
+    </div>
+    <div class="subinfo">
+      <span><%= post.created_at.strftime('%Y-%m-%d') %></span>
+      <span><%= post.comments.count %> Comments</span>
+    </div>
+    <div class="description">
+      <p><%= post.title %></p>
+    </div>
+
+    <div class="action">
+      <div class="read-more">
+        <a href="<%= post_path post %>">
+          <%= render "components/button", label: "Read More" %>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

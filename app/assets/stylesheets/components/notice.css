@@ -1,0 +1,17 @@
+.notice {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.notice.alert-success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.notice.alert-danger {
+  background-color: #f2dede;
+  color: #a94442;
+}

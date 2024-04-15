@@ -1,16 +1,7 @@
 <div class="home">
-  <div class="banner">
-    <div class="banner-picture">
-      <div class="overdelay"></div>
-      <div class="content">
-        <h3>Welcome to HelloEven</h3>
-      </div>
-    </div>
-  </div>
+  <%= render "components/banner", img: asset_path("banner.jpeg"), title: "Welcome to HelloEven" %>
   <div class="lastest-posts">
     <h3>Latest Posts</h3>
-    <% @lastest_posts.each do |post| %>
-      <%= render post, post: post %>
-    <% end %>
+    <%= render partial: "posts/post_card", collection: @lastest_posts, as: :post %>
   </div>
 </div>
