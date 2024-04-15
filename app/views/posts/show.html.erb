@@ -1,6 +1,6 @@
 <%= turbo_stream_from @post %>
 
-<%= render "components/banner", img: asset_path("banner.jpeg"), title: @post.title %>
+<%= render "components/banner", img: asset_path("banner.jpg"), title: @post.title %>
 
 <%= render @post %>
 <%= render "posts/comments", post: @post %>
