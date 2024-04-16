@@ -17,3 +17,8 @@ body {
 a {
 	text-decoration: none;
 }
+button, input, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}

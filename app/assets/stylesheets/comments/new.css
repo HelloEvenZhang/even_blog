@@ -1,0 +1,42 @@
+.comment-form {
+  width: 100%;
+  padding: 40px 80px 80px;
+  box-sizing: border-box;
+}
+.comment-form .container {
+  width: 1170px;
+  margin: 15px auto;
+  position: relative;
+}
+
+.comment-form .container .title {
+  padding-bottom: 30px;
+  font-size: 23px;
+  margin: 0;
+}
+
+.comment-form .container .name {
+  display: block;
+  width: 350px;
+  height: 36px;
+  border: 1px solid #999;
+  padding: 7px;
+  margin: 0 0 20px;
+  box-sizing: border-box;
+}
+
+.comment-form .container .content {
+  display: block;
+  width: 1100px;
+  height: 200px;
+  padding: 7px;
+  margin: 20px 0;
+  border: 1px solid #999;
+}
+
+.comment-form .container .submit {
+  display: block;
+  position: absolute;
+  bottom: -55px;
+  right: 53px;
+}

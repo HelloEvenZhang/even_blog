@@ -1,7 +1,13 @@
-<h2>Comments</h2>
-
-<div id="comments">
-  <%= render partial: "comments/comment", collection: post.comments %>
+<div class="comments">
+  <div class="container" id="comments">
+    <div class="title">
+      <h3><%= post.comments.count %> Comments</h3>
+    </div>
+    <div class="tips">
+      <p>You can see the latest comments without refreshing the page. Let's Talk!</p>
+    </div>
+    <%= render partial: "comments/comment", collection: post.comments %>
+  </div>
 </div>
 
 <%= render "comments/new", post: post %>

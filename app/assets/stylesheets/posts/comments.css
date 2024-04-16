@@ -1,0 +1,25 @@
+.comments {
+  width: 100%;
+  background: #f9f9f9;
+  padding: 50px 0;
+}
+
+.comments .container {
+  width: 1170px;
+  margin: 0 auto;
+  color: #666666;
+}
+
+.comments .container .title h3 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  padding-left: 80px;
+  margin: 0;
+}
+
+.comments .container .tips p {
+  padding-left: 80px;
+  padding-top: 20px;
+  font-size: 13px;
+  margin: 0;
+}

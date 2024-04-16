@@ -1,5 +1,12 @@
-<%= form_with model: [post, Comment.new] do |form| %>
-  Your comment:<br>
-  <%= form.text_area :content, size: "20x5" %>
-  <%= form.submit %>
-<% end %>
+<div class="comment-form">
+  <div class="container">
+    <%= form_with model: [post, Comment.new] do |form| %>
+      <h5 class="title">Leave a reply</h5>
+      <%= form.text_field :name, class: "name", placeholder: "Name (Optional)" %>
+      <%= form.text_area :content, class: "content", placeholder: "Message" %>
+      <div class="submit">
+        <%= render "components/button", label: "Comment", type: "submit" %>
+      </div>
+    <% end %>
+  </div>
+</div>

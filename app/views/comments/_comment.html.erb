@@ -1,4 +1,13 @@
-<div id="<%= dom_id(comment) %>">
-  <%= comment.content %>
-  - <%= time_tag comment.created_at, "data-local": "time-ago" %>
+<div class="comment" id="<%= dom_id(comment) %>">
+  <div class="content">
+    <div class="name">
+      <h5><%= comment.name || "游客" %></h5>
+    </div>
+    <div class="created-at">
+      <span><%= time_tag comment.created_at %></span>
+    </div>
+    <div class="content">
+      <p><%= comment.content %></p>
+    </div>
+  </div>
 </div>

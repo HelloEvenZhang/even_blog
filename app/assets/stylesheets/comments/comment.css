@@ -1,0 +1,27 @@
+.comment {
+  width: 1170px;
+  padding: 50px 0 50px 100px;
+  box-sizing: border-box;
+}
+
+.comment .content {
+  color: #666666;
+}
+
+.comment .content .name h5 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.comment .content .created-at span {
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #763A31;
+}
+
+.comment .content .content p {
+  padding-top: 10px;
+  font-size: 14px;
+}
