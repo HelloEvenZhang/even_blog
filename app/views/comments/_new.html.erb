@@ -1,6 +1,7 @@
 <div class="comment-form">
+  <%= render "components/notice", notice: @notice %>
   <div class="container">
-    <%= form_with model: [post, Comment.new] do |form| %>
+    <%= form_with model: [post, Comment.new(name: cookies[:commenter_name])] do |form| %>
       <h5 class="title">Leave a reply</h5>
       <%= form.text_field :name, class: "name", placeholder: "Name (Optional)" %>
       <%= form.text_area :content, class: "content", placeholder: "Message" %>

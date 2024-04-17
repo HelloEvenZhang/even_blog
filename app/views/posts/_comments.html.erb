@@ -1,5 +1,5 @@
 <div class="comments">
-  <div class="container" id="comments">
+  <div class="container">
     <div class="title">
       <h3><%= post.comments.count %> Comments</h3>
     </div>
@@ -9,5 +9,3 @@
     <%= render partial: "comments/comment", collection: post.comments %>
   </div>
 </div>
-
-<%= render "comments/new", post: post %>

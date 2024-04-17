@@ -1,6 +1,10 @@
-<%= turbo_stream_from @post %>
-
 <%= render "components/banner", img: asset_path("banner.jpg"), title: @post.title %>
-
 <%= render @post %>
-<%= render "posts/comments", post: @post %>
+
+<%= turbo_stream_from :comment_create %>
+<%= turbo_frame_tag "comments" do %>
+  <%= render "posts/comments", post: @post %>
+<% end%>
+<%= turbo_frame_tag "comments-new", target: "_top" do %>
+  <%= render "comments/new", post: @post %>
+<% end%>
