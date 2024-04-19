@@ -1,4 +1,9 @@
 <div class="post" id="<%= dom_id post %>">
+    <% if post.tags.present? %>
+      <div class="subinfo">
+        <span><%= render "components/tag", tags: post.tags %></span>
+      </div>
+    <% end%>
     <div class="subinfo">
       <span><%= post.created_at.strftime('%Y-%m-%d') %></span>
     </div>

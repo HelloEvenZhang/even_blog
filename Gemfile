@@ -10,10 +10,12 @@ gem "rails", "~> 7.1.3.2"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
+
+# Use PostgreSQL
+gem "pg", "~> 1.5"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -38,6 +40,12 @@ gem "image_processing", "~> 1.2"
 
 # Shim to load environment variables from .env into ENV.
 gem "dotenv-rails", require: 'dotenv/rails-now'
+
+# will_paginate is a pagination library.
+gem "will_paginate", "~> 4.0"
+
+# PgSearch builds named scopes that take advantage of PostgreSQL's full text search.
+gem "pg_search", "~> 2.3"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

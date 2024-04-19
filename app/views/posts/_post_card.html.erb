@@ -1,6 +1,8 @@
 <div class="post-card" id="<%= dom_id post %>">
   <div class="card-background">
-    <%= image_tag "post-card-default.jpg" %>
+    <a href="<%= post_path post %>">
+      <%= image_tag post.background_img.attached? ? post.background_img : "post-card-default.jpg" %>
+    </a>
   </div>
   <div class="card-info">
     <div class="title">
@@ -8,10 +10,13 @@
     </div>
     <div class="subinfo">
       <span><%= post.created_at.strftime('%Y-%m-%d') %></span>
+      <% if post.tags.present? %>
+        <span><%= render "components/tag", tags: post.tags %></span>
+      <% end%>
       <span><%= post.comments.count %> Comments</span>
     </div>
     <div class="description">
-      <p><%= post.title %></p>
+      <p><%= post.description %></p>
     </div>
 
     <div class="action">

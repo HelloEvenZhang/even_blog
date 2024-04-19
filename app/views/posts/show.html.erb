@@ -1,4 +1,4 @@
-<%= render "components/banner", img: asset_path("banner.jpg"), title: @post.title %>
+<%= render "components/banner", attached: @post.background_img.attached?, img_path: @post.background_img.attached? ? url_for(@post.background_img) : asset_path("banner.jpg"), title: @post.title %>
 <%= render @post %>
 
 <%= turbo_stream_from :comment_create %>

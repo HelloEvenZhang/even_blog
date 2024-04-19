@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.paginate(page: params[:page], per_page: 5)
   end
 
   def show
@@ -37,6 +37,12 @@ class PostsController < ApplicationController
     @post.destroy!
 
     redirect_to posts_url, notice: "Post was successfully destroyed."
+  end
+
+  def search
+    @posts = Post.search_by(params[:query]).paginate(page: params[:page], per_page: 5)
+
+    render "index"
   end
 
   private

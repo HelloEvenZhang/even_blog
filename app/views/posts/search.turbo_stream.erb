@@ -1,0 +1,4 @@
+<%= turbo_stream.update "search_result" do %>
+  <%= render partial: "posts/post_card", collection: @posts, as: :post %>
+  <%= render "components/paginate", collection: @posts %>
+<% end %>

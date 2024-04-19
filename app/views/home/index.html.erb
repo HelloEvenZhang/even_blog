@@ -1,5 +1,5 @@
 <div class="home">
-  <%= render "components/banner", img: asset_path("banner.jpg"), title: "Welcome to HelloEven" %>
+  <%= render "components/banner", title: "Welcome to HelloEven" %>
   <div class="lastest-posts">
     <h3>Latest Posts</h3>
     <%= render partial: "posts/post_card", collection: @lastest_posts, as: :post %>
