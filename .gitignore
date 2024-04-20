@@ -38,3 +38,6 @@
 
 # Ignore mrsk hook
 /.mrsk
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

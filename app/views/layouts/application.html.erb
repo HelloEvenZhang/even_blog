@@ -6,6 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -20,7 +21,7 @@
           <ul>
             <li><a href="/">HOME</a></li>
             <li><a href="/posts">POSTS</a></li>
-            <li><a href="/">ABOUT</a></li>
+            <li><a href="/about">ABOUT</a></li>
           </ul>
         </div>
       </div>

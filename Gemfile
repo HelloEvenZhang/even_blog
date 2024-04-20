@@ -10,12 +10,10 @@ gem "rails", "~> 7.1.3.2"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
+gem "pg", "~> 1.5"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
-
-# Use PostgreSQL
-gem "pg", "~> 1.5"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
@@ -25,6 +23,9 @@ gem "turbo-rails"
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
+
+# Use Tailwind CSS.
+gem "tailwindcss-rails", "~> 2.4"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"

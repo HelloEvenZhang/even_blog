@@ -9,4 +9,6 @@ Rails.application.routes.draw do
       get :search
     end
   end
+
+  get 'about', to: 'home#about'
 end
