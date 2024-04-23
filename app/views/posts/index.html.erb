@@ -1,12 +1,12 @@
-<div class="search">
-  <div class="search_bar">
-    <%= form_with url: "/posts/search", method: :get do |form| %>
-      <%= form.text_field :query, class: "query", placeholder: "Search Post Title or Tag or Description ..." %>
-      <%= render "components/button", label: "Search", type: "submit" %>
-    <% end %>
+<%= render "components/search", label: "搜索文章的标题、描述、标签..." %>
+<% if @posts.present?  %>
+  <div class="grid grid-cols-1 gap-y-8 gap-x-4 max-w-7xl mx-auto justify-items-center items-center my-20 sm:my-32 md:my-40 md:grid-cols-2">
+    <%= render partial: "posts/post_card", collection: @posts, as: :post %>
   </div>
-</div>
-
-<%= render partial: "posts/post_card", collection: @posts, as: :post %>
-<%= render "components/paginate", collection: @posts %>
-
+  <%= render "components/paginate", collection: @posts %>
+<% else %>
+  <div class="flex flex-col gap-10 items-center max-w-3xl mx-auto my-20">
+    <div class="text-slate-900 font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-center dark:text-white">Mr. Crow 什么都没有找到！</div>
+    <%= image_tag "nothing_found" %>
+  </div>
+<% end %>

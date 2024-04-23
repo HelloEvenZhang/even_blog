@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
 
   def index
-    @posts = Post.all.paginate(page: params[:page], per_page: 5)
+    @posts = Post.all.paginate(page: params[:page], per_page: 4)
   end
 
   def show
@@ -40,13 +40,17 @@ class PostsController < ApplicationController
   end
 
   def search
-    @posts = Post.search_by(params[:query]).paginate(page: params[:page], per_page: 5)
+    if params[:query].present?
+      @posts = Post.search_by(params[:query]).paginate(page: params[:page], per_page: 4)
+    else
+      @posts = Post.paginate(page: params[:page], per_page: 4)
+    end
 
     render "index"
   end
 
   private
-  
+
   def set_post
     @post = Post.find(params[:id])
   end

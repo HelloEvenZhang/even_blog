@@ -1,7 +1,25 @@
-<div class="home">
-  <%= render "components/banner", title: "Welcome to HelloEven" %>
-  <div class="lastest-posts">
-    <h3>Latest Posts</h3>
-    <%= render partial: "posts/post_card", collection: @lastest_posts, as: :post %>
+<div class="relative h-screen px-4 sm:px-6 md:px-8">
+  <div class="absolute inset-0 h-screen bg-top bg-no-repeat bg-transparent background-hero"></div>
+  <div class="relative max-w-5xl mx-auto pt-24 lg:pt-32">
+    <h1 class="text-slate-900 dark:text-white font-extrabold italic text-4xl sm:text-5xl lg:text-6xl tracking-tight text-center">
+      子曰：唯上知与下愚不移
+    </h1>
+    <p class="mt-6 text-lg text-slate-600 text-center max-w-3xl mx-auto dark:text-slate-400">
+      努力成为学而知之者，但困而知之者也未尝不可
+    </p>
+    <%= render "components/search", label: "搜索点什么试试..." %>
+    <div data-controller="scroller" class="flex flex-col justify-end max-w-3xl mx-auto h-96">
+      <button data-action="click->scroller#scroll" data-scroller-to-param="#lastest_posts" class="mx-auto animate-bounce bg-white dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
+        <svg class="w-6 h-6 text-violet-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </button>
+    </div>
   </div>
+</div>
+<div id="lastest_posts" class="grid grid-cols-1 gap-y-8 gap-x-4 max-w-7xl mx-auto justify-items-center items-center mb-20 sm:mb-32 md:mb-40 md:grid-cols-2">
+  <div class="col-span-1 self-start my-10 px-4 sm:px-6 lg:px-8 md:col-span-2">
+    <h2 class="text-slate-900 font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-center dark:text-white">最新文章</h2>
+  </div>
+  <%= render partial: "posts/post_card", collection: @lastest_posts, as: :post %>
 </div>

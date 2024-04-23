@@ -1,11 +1,12 @@
-<div class="comments">
-  <div class="container">
-    <div class="title">
-      <h3><%= post.comments.count %> Comments</h3>
-    </div>
-    <div class="tips">
-      <p>You can see the latest comments without refreshing the page. Let's Talk!</p>
-    </div>
-    <%= render partial: "comments/comment", collection: post.comments %>
+<div class="max-w-2xl mx-auto px-4 py-8 lg:py-16 antialiased">
+  <div class="flex flex-col justify-center items-start mb-6">
+    <h2 class="flex gap-2 text-lg lg:text-2xl font-bold text-gray-900 dark:text-white">
+      <svg class="fill-gray-700 dark:fill-white" viewBox="0 0 512 512" width="24" title="comment">
+        <path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z" />
+      </svg>
+      评论区 (<%= post.comments.count %>)
+    </h2>
+    <p>不需要刷新页面就能看到最新的评论哦～ 快试试吧！</p>
   </div>
+  <%= render partial: "comments/comment", collection: post.comments %>
 </div>

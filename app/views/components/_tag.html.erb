@@ -1,6 +1,4 @@
 <%# locals: (tags: nil) %>
 <% tags.each do |tag| %>
-  <div class="tag">
-    <%= tag.name %>
-  </div>
+  <span class="inline-block bg-gray-300 text-gray-700 dark:bg-gray-700 dark:text-gray-300 rounded-full px-3 py-1 text-sm font-semibold"><%= tag.name %></span>
 <% end%>

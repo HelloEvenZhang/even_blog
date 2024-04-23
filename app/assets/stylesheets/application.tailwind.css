@@ -2,12 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
+@layer utilities {
+  .background-hero {
+    background-image: url('hero.jpg');
+    background-size: 280rem;
+  }
+  .dark .background-hero {
+    background-image: url('hero-dark.jpg');
+    background-size: 180rem;
+  }
 
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+  /* Trix Content */
+  .trix-content {
+    @apply text-gray-700 dark:text-gray-300 text-lg leading-relaxed;
+  }
+
+  .trix-content pre {
+    @apply bg-gray-200 dark:bg-gray-800 p-4 rounded-md;
+  }
+
+  .trix-content a {
+    @apply italic underline decoration-solid ;
+  }
+
+  .trix-content ul {
+    @apply list-disc;
+  }
+  
+  .trix-content ol {
+    @apply list-decimal;
   }
 }
-
-*/
