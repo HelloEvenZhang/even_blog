@@ -27,7 +27,7 @@ You can now visit the application in your web browser at  http://localhost:3000.
 
 - Ruby 3.2.0
 - Ruby on Rails 7.1
-- Bootstrap
+- TailwindCSS
 - PostgreSQL
 
 ## License
