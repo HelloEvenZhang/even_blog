@@ -230,11 +230,11 @@ GEM
       net-ssh (>= 2.8.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
-    tailwindcss-rails (2.3.0-aarch64-linux)
+    tailwindcss-rails (2.4.0-aarch64-linux)
       railties (>= 6.0.0)
-    tailwindcss-rails (2.3.0-x86_64-darwin)
+    tailwindcss-rails (2.4.0-x86_64-darwin)
       railties (>= 6.0.0)
-    tailwindcss-rails (2.3.0-x86_64-linux)
+    tailwindcss-rails (2.4.0-x86_64-linux)
       railties (>= 6.0.0)
     thor (1.2.2)
     timeout (0.4.1)
@@ -282,7 +282,7 @@ DEPENDENCIES
   redis (>= 4.0.1)
   sprockets-rails
   stimulus-rails
-  tailwindcss-rails (= 2.3.0)
+  tailwindcss-rails (~> 2.4)
   turbo-rails
   web-console
   will_paginate (~> 4.0)
