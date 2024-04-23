@@ -11,7 +11,6 @@ gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.5"
-
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
@@ -25,7 +24,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 # Use Tailwind CSS.
-gem "tailwindcss-rails", "~> 2.4"
+gem "tailwindcss-rails", "= 2.3.0"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
@@ -68,4 +67,3 @@ group :development do
 
   gem "byebug"
 end
-
