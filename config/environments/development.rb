@@ -62,6 +62,7 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
+  # Disable Asset Pipeline Digest in Development.
   config.assets.digest = false
 
   # Raises error for missing translations.
