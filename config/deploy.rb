@@ -13,7 +13,7 @@ namespace :deploy do
     before :precompile, :build_tailwindcss do
       on roles(:all) do
         within "#{current_path}" do
-          execute "$HOME/.rbenv/bin/rbenv exec bundle exec rails tailwindcss:build"
+          execute "rails tailwindcss:build"
         end
       end
     end
