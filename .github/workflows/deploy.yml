@@ -19,3 +19,4 @@ jobs:
         with:
             ssh-private-key: ${{ secrets.DEPLOY_KEY }}
       - run: bundle exec cap production deploy
+      - run: bundle exec cap production custom:run_assets_precompile
