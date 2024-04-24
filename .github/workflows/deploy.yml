@@ -18,4 +18,5 @@ jobs:
       - uses: webfactory/ssh-agent@v0.9.0
         with:
             ssh-private-key: ${{ secrets.DEPLOY_KEY }}
+      - run: bundle exec rails tailwindcss:build
       - run: bundle exec cap production deploy
