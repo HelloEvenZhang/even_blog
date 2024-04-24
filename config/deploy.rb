@@ -14,7 +14,7 @@ namespace :deploy do
       on release_roles(fetch(:assets_roles)) do
         within release_path do
           with rails_env: fetch(:rails_env), rails_groups: fetch(:rails_assets_groups) do
-            execute :rails, "assets:precompile"
+            execute :rails, "tailwindcss:build"
           end
         end
       end
