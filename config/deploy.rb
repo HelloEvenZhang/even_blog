@@ -11,9 +11,11 @@ append :linked_dirs, "log", "storage", "tmp/pids", "tmp/cache", "tmp/sockets", "
 namespace :deploy do
   namespace :assets do
     before :precompile, :build_tailwindcss do
-      on roles(:all) do
-        within "#{current_path}" do
-          execute "rails tailwindcss:build"
+      on release_roles(fetch(:assets_roles)) do
+        within release_path do
+          with rails_env: fetch(:rails_env), rails_groups: fetch(:rails_assets_groups) do
+            execute :rails, "assets:precompile"
+          end
         end
       end
     end
