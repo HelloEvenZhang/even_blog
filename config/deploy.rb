@@ -11,7 +11,9 @@ append :linked_dirs, "log", "storage", "tmp/pids", "tmp/cache", "tmp/sockets", "
 namespace :deploy do
   namespace :assets do
     before :precompile, :build_tailwindcss do
-      execute "$HOME/.rbenv/bin/rbenv exec bundle exec rails tailwindcss:build"
+      on roles(:all) do
+        execute "$HOME/.rbenv/bin/rbenv exec bundle exec rails tailwindcss:build"
+      end
     end
   end
 end
