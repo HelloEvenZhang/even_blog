@@ -7,3 +7,5 @@ set :branch, "release"
 
 append :linked_files, "config/database.yml", "config/master.key"
 append :linked_dirs, "log", "storage", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", ".bundle", "public/system", "public/uploads"
+
+before 'deploy:assets:precompile', 'bundle exec rails tailwindcss:build'
