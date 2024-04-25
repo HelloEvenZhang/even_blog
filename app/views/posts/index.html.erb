@@ -1,6 +1,6 @@
 <%= render "components/search", label: "搜索文章的标题、描述、标签..." %>
 <% if @posts.present?  %>
-  <div class="grid grid-cols-1 gap-y-8 gap-x-4 max-w-7xl mx-auto justify-items-center items-center my-20 sm:my-32 md:my-40 md:grid-cols-2">
+  <div class="grid grid-cols-1 gap-y-8 gap-x-4 max-w-7xl mx-auto justify-items-center items-center my-20 sm:my-32 md:my-40 lg:grid-cols-2">
     <%= render partial: "posts/post_card", collection: @posts, as: :post %>
   </div>
   <%= render "components/paginate", collection: @posts %>
