@@ -21,7 +21,6 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
   end
 
-  # Only allow a list of trusted parameters through.
   def comment_params
     params.require(:comment).permit(:name, :content)
   end

@@ -1,0 +1,22 @@
+<%= form_with(model: [:admin, tag]) do |form| %>
+  <% if tag.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(tag.errors.count, "error") %> prohibited this tag from being saved:</h2>
+
+      <ul>
+        <% tag.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-4">
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name, class:"w-2/5" %>
+  </div>
+
+  <div class="my-4">
+    <%= form.submit "Save", class: "px-4 py-2 bg-primary-700 text-white rounded-md hover:bg-primary-800" %>
+  </div>
+<% end %>

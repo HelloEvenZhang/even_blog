@@ -20,6 +20,7 @@ module.exports = {
       sky: colors.sky,
       slate: colors.slate,
       gray: colors.gray,
+      red: colors.red,
       night: '#0B1120',
     },
     extend: {

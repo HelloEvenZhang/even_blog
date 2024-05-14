@@ -9,12 +9,13 @@
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <%= javascript_include_tag "init_dark_mode" %>
   </head>
 
   <body class="antialiased text-slate-500 bg-slate-50">
-    <%= render "layouts/header" %>
-    <%= yield %>
-    <%= render "layouts/footer" %>
+    <%= render "layouts/admin/header" %>
+    <%= render "layouts/admin/sidebar" %>
+    <main class="pt-20 w-full sm:pl-64">
+      <%= yield %>
+    </main>
   </body>
 </html>
