@@ -5,8 +5,8 @@ class Post < ApplicationRecord
                   associated_against: {
                     tags: [:name]
                   },
-                  :using => {
-                    :tsearch => {:dictionary => "chinese", :prefix => true}
+                  using: {
+                    tsearch: { dictionary: "chinese", prefix: true }
                   }
 
   has_and_belongs_to_many :tags
