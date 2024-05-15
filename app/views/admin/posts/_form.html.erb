@@ -11,23 +11,29 @@
     </div>
   <% end %>
 
-  <div class="my-4">
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title, class:"w-2/5" %>
+  <div class="my-4 w-[36em]">
+    <%= form.label :title, class: "block" %>
+    <%= form.text_field :title, class:"w-full" %>
+  </div>
+
+  <div class="my-4 w-[36em]">
+    <%= form.label :description, class: "block" %>
+    <%= form.text_area :description, class:"w-full" %>
+  </div>
+
+  <div data-controller="image-preview" class="my-4 w-[36em]">
+    <%= form.label :background_img, class: "block" %>
+    <%= image_tag(post.background_img.attached? ? post.background_img : "post-card-default.jpg", data: { target: "image-preview.output" }, class: "w-full h-96 object-cover rounded-t-lg") %>
+    <%= form.file_field :background_img, accept: "image/*", data: { target: "image-preview.input", action: "image-preview#readURL" }, class: "block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none file:border-0 file:me-4 file:py-3 file:px-4" %>
+  </div>
+
+  <div class="my-4 w-[36em]">
+    <%= form.label :tags, class: "block" %>
+    <%= form.collection_select :tag_ids, Tag.all, :id, :name, {}, { multiple: true, id: 'tag-select', class: "w-1/2", :'data-controller' => 'tom_select' } %>
   </div>
 
   <div class="my-4">
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description, class:"w-2/5" %>
-  </div>
-
-  <div class="my-4">
-    <%= form.label :tags, style: "display: block" %>
-    <%= form.collection_select :tag_ids, Tag.all, :id, :name, {}, { multiple: true, id: 'tag-select', class: 'w-1/5', :'data-controller' => 'tom_select' } %>
-  </div>
-
-  <div class="my-4">
-    <%= form.label :content, style: "display: block" %>
+    <%= form.label :content, class: "block" %>
     <%= form.rich_text_area :content %>
   </div>
 
