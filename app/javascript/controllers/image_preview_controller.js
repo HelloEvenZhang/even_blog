@@ -11,8 +11,8 @@ export default class extends Controller {
       var reader = new FileReader();
 
       reader.onload = function () {
-       output.src = reader.result
-     }
+        output.src = reader.result;
+      }
 
      reader.readAsDataURL(input.files[0]);
    }
