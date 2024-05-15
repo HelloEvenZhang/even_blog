@@ -1,5 +1,5 @@
 class Admin::PostsController < Admin::ApplicationController
-  before_action :set_post, only: %i[ edit update destroy ]
+  before_action :set_post, only: %i[edit update destroy]
 
   def index
     @posts = Post.all.order(:id).paginate(page: params[:page], per_page: 10)

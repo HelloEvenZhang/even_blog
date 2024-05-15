@@ -1,5 +1,5 @@
 class Admin::TagsController < Admin::ApplicationController
-  before_action :set_tag, only: %i[ edit update destroy ]
+  before_action :set_tag, only: %i[edit update destroy]
 
   def index
     @tags = Tag.all.order(:id).paginate(page: params[:page], per_page: 10)

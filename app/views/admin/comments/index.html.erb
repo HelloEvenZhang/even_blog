@@ -1,0 +1,37 @@
+<h2 class="px-5 py-5 text-lg lg:text-2xl font-bold text-gray-900">
+  Comments List
+</h2>
+
+<div class="overflow-x-auto px-5 py-5">
+  <div class="inline-block min-w-full">
+    <div class="overflow-hidden">
+      <table class="border min-w-full">
+        <thead class="border-b bg-primary-700 text-white">
+          <tr>
+            <th scope="col" class="px-6 py-4 text-left text-sm font-medium">#</th>
+            <th scope="col" class="px-6 py-4 text-left text-sm font-medium">Post ID</th>
+            <th scope="col" class="px-6 py-4 text-left text-sm font-medium">Name</th>
+            <th scope="col" class="px-6 py-4 text-left text-sm font-medium">Content</th>
+            <th scope="col" class="px-6 py-4 text-left text-sm font-medium">Created At</th>
+            <th scope="col" class="px-6 py-4 text-left text-sm font-medium">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @comments.each do |comment| %>
+            <tr class="group cursor-pointer border-b hover:bg-gray-100">
+              <td class="whitespace-nowrap px-6 py-4 text-sm font-medium"><%= comment.id %></td>
+              <td class="whitespace-nowrap px-6 py-4 text-sm font-light"><%= link_to @post.id, post_path(@post) %></td>
+              <td class="whitespace-nowrap px-6 py-4 text-sm font-light"><%= comment.name.presence || "游客" %></td>
+              <td class="whitespace-nowrap px-6 py-4 text-sm font-light"><%= truncate comment.content, length: 80 %></td>
+              <td class="whitespace-nowrap px-6 py-4 text-sm font-light"><%= comment.created_at.strftime('%Y-%m-%d %H:%M:%S') %></td>
+              <td class="whitespace-nowrap px-6 py-4 text-sm font-light">
+                <%= link_to 'Delete', admin_post_comment_path(@post, comment), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }, class: 'px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<%= render "components/paginate", collection: @comments %>

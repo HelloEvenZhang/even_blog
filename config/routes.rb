@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'admin', to: 'admin/dashboard#index'
 
   resources :posts, only: [:index, :show] do
-    resources :comments
+    resources :comments, only: [:create]
     collection do
       get :search
     end
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :posts do
+      resources :comments, only: [:index, :destroy]
       collection do
         get :search
       end
