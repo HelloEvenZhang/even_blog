@@ -12,7 +12,6 @@
     background-size: 180rem;
   }
 
-  /* Trix Content */
   .trix-content {
     @apply text-gray-700 dark:text-gray-300 text-lg leading-relaxed;
   }
