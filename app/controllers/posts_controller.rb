@@ -6,6 +6,9 @@ class PostsController < ApplicationController
   end
 
   def show
+    @seo_title = @post.title
+    @seo_keywords = @post.tags.map(&:name).join(", ")
+    @seo_description = @post.description
   end
 
   def search
