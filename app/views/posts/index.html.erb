@@ -1,12 +1,12 @@
 <%= render "components/search", label: "搜索文章的标题、描述、标签..." %>
 <% if @posts.present?  %>
-  <div class="grid grid-cols-1 gap-y-8 gap-x-4 max-w-7xl mx-auto justify-items-center items-center my-20 sm:my-32 md:my-40 lg:grid-cols-2">
+  <div class="grid md:grid-cols-2 grid-cols-1 gap-y-4 gap-x-4 px-2 justify-items-center items-start max-w-7xl mx-auto md:my-40 sm:my-32 my-20">
     <%= render partial: "posts/post_card", collection: @posts, as: :post %>
   </div>
   <%= render "components/paginate", collection: @posts %>
 <% else %>
   <div class="flex flex-col gap-10 items-center max-w-3xl mx-auto my-20">
-    <div class="text-slate-900 font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-center dark:text-white">Mr. Crow 什么都没有找到！</div>
+    <div class="lg:text-5xl sm:text-4xl text-3xl font-extrabold tracking-tight text-center text-slate-900 dark:text-white">Mr. Crow 什么都没有找到！</div>
     <%= image_tag "nothing_found.png" %>
   </div>
 <% end %>

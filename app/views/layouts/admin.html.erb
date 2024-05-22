@@ -11,11 +11,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="antialiased text-slate-500 bg-slate-50">
+  <body class="fixed w-full h-full antialiased text-slate-500 bg-slate-50">
     <%= render "layouts/admin/header" %>
-    <%= render "layouts/admin/sidebar" %>
-    <main class="pt-20 w-full sm:pl-64">
-      <%= yield %>
-    </main>
+    <div class="h-[calc(100vh-80px)]">
+      <%= render "layouts/admin/aside" %>
+      <main class="overflow-auto h-full">
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>
