@@ -33,5 +33,5 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
 
-# rails server will run the Tailwind watch process in the background
-plugin :tailwindcss if ENV.fetch("RAILS_ENV", "development") == "development"
+# Tailwind watch is managed by Foreman (css process in Procfile.dev uses debug mode to avoid --minify bug)
+# plugin :tailwindcss if ENV.fetch("RAILS_ENV", "development") == "development"
