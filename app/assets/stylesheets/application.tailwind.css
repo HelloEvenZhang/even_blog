@@ -16,6 +16,26 @@
     @apply text-gray-700 dark:text-gray-300 text-lg leading-relaxed;
   }
 
+  /* 前台文章页标题样式 */
+  .trix-content h1 { @apply text-3xl font-bold my-4; }
+  .trix-content h2 { @apply text-2xl font-bold my-3; }
+  .trix-content h3 { @apply text-xl font-semibold my-2; }
+
+  /* 后台编辑器内标题样式（所见即所得）。
+     Trix 自带 stylesheet 会将 h1 强制设为 1.2em，必须用 !important 覆盖。 */
+  trix-editor h1 { font-size: 1.875rem !important; font-weight: 700 !important; }
+  trix-editor h2 { font-size: 1.5rem !important;   font-weight: 700 !important; }
+  trix-editor h3 { font-size: 1.25rem !important;  font-weight: 600 !important; }
+
+  /* 工具栏标题按钮文字标签（由 trix_toolbar_controller.js 注入） */
+  .trix-heading-label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1;
+    display: inline-block;
+  }
+
+
   .trix-content pre {
     @apply bg-gray-200 dark:bg-gray-800 p-4 rounded-md;
   }

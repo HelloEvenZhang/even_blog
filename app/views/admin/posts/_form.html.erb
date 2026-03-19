@@ -32,7 +32,7 @@
     <%= form.collection_select :tag_ids, Tag.all, :id, :name, {}, { multiple: true, id: 'tag-select', class: "w-1/2", :'data-controller' => 'tom_select' } %>
   </div>
 
-  <div class="my-4">
+  <div class="my-4" data-controller="trix-toolbar">
     <%= form.label :content, class: "block" %>
     <%= form.rich_text_area :content %>
   </div>

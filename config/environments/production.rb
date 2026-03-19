@@ -38,6 +38,8 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
+  # Use proxy mode so signed disk URLs never expire in cached pages
+  config.active_storage.resolve_model_to_route = :rails_storage_proxy
 
   config.action_cable.url = "wss://helloeven.com/cable"
   config.action_cable.allowed_request_origins = [ "https://helloeven.com" ]
